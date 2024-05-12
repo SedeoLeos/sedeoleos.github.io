@@ -657,6 +657,12 @@ video {
   padding: 1.25rem;
 }
 
+@media (min-width: 1024px) {
+  .ex-section {
+    flex-wrap: nowrap;
+  }
+}
+
 .ex-ul {
   display: flex;
   flex-direction: column;
@@ -684,13 +690,7 @@ video {
 }
 
 .swiper-slide {
-  width: 50%;
-}
-
-@media (min-width: 1024px) {
-  .swiper-slide {
-    width: 75%;
-  }
+  width: 75%;
 }
 
 .card {
@@ -981,6 +981,11 @@ body.active main div:nth-child(1) {
 .border-slate-100 {
   --tw-border-opacity: 1;
   border-color: rgb(241 245 249 / var(--tw-border-opacity));
+}
+
+.border-slate-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(226 232 240 / var(--tw-border-opacity));
 }
 
 .bg-primary {

@@ -22,7 +22,7 @@
         @apply   w-16 h-16 object-contain
     }
     .ex-section {
-        @apply flex gap-10 p-5 mt-10 flex-wrap
+        @apply flex gap-10 p-5 mt-10 flex-wrap lg:flex-nowrap
        
     }
     .ex-ul {
@@ -42,7 +42,7 @@
         
     }
     .swiper-slide {
-        @apply  w-1/2 lg:w-3/4
+        @apply  w-3/4
     }
     .card {
         @apply p-5 rounded-lg flex  text-white gap-5 flex-col lg:flex-row
