@@ -720,6 +720,7 @@ video {
 @media (min-width: 1024px) {
   .card img {
     height: 20rem;
+    min-height: 20rem;
   }
 }
 
@@ -792,16 +793,12 @@ body.active main div:nth-child(1) {
   margin-bottom: 2.5rem;
 }
 
-.mt-10 {
-  margin-top: 2.5rem;
+.mt-20 {
+  margin-top: 5rem;
 }
 
 .mt-36 {
   margin-top: 9rem;
-}
-
-.mt-20 {
-  margin-top: 5rem;
 }
 
 .block {
@@ -1182,16 +1179,8 @@ body.active main div:nth-child(1) {
 }
 
 @media (min-width: 768px) {
-  .md\:min-w-8 {
-    min-width: 2rem;
-  }
-
   .md\:min-w-80 {
     min-width: 20rem;
-  }
-
-  .md\:flex-wrap {
-    flex-wrap: wrap;
   }
 }
 
