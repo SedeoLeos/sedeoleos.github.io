@@ -63,7 +63,7 @@
             </nav>
         </div>
     </header>
-    <main class="flex-1 relative overflow-x-hidden overflow-y-scroll p-10">
+    <main class="flex-1 relative overflow-x-hidden overflow-y-scroll px-5 py-10 lg:p-10">
         <div class="fixed top-0 right-0 left-0 p-5 flex justify-between items-end backdrop-blur-lg">
             <button id="drawer" 
                 class="visble lg:hidden p-2 rounded-full flex justify-center items-center shadow-lg bg-white text-secondary">
@@ -84,7 +84,7 @@
                 </p>
                 <p class="lg:ml-40">I'm <span class="border-b-4 border-primary" id="apropoInfo"
                         data-typed-items="Designer, Developer, Freelancer, Photographer"></span></p>
-                <aside class="stack flex items-center justify-center flex-wrap gap-5 p-5 max-w-[1200px]">
+                <aside class="stack flex items-center justify-center flex-wrap gap-2 p-0 lg:gap-5 lg:p-5 max-w-[1200px]">
                     <div>
                         <img src="./assets/image/stack/python.svg" alt="">
                     </div>
@@ -295,7 +295,7 @@
                 </aside>
             </div>
         </section>
-        <section class="grid grid-cols-2 p-10 gap-5 justify-center items-center bg-">
+        <section class="grid grid-cols-1 lg:grid-cols-2 p-2 lg:p-10 gap-5 justify-center items-center mt-20">
             <div class="card-skill">
                 <p>Documentations</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eos eum alias suscipit natus amet
@@ -331,7 +331,7 @@
 
         </section>
         <section class="ex-section">
-            <h2>Experience</h2>
+            <h2 class="w-full lg:w-fit">Experience</h2>
             <ul class="ex-ul">
                 <li class="ex-item">
                     <div class="ex-headers">
@@ -414,9 +414,9 @@
 
             </ul>
         </section>
-        <section class="ex-section flex-col">
+        <section class="flex flex-col gap-10 p-5 my-10">
             <h2>Réalisation</h2>
-            <div class="swipers px-20" id="mySwiper">
+            <div class="swipers px-2 lg:px-20" id="mySwiper">
                 <div class="swiper-wrapper ">
                     <div class="swiper-slide">
                         <div class="card bg-gradient-to-r from-slate-900 to-slate-700">
@@ -575,9 +575,9 @@
                 <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
             </div>
         </section>
-        <section class="p-10 flex bg-primary rounded-lg">
-            <div class="flex flex-col items-center justify-center gap-y-5 p-10 text-white">
-                <h4 class="text-3xl w-80">
+        <section class="px-4 py-10 lg:p-10 flex bg-primary rounded-lg flex-wrap gap-y-5">
+            <div class="flex flex-col items-center justify-center gap-y-5 p-0 lg:p-10 text-white">
+                <h4 class="text-3xl w-full lg:w-80">
                     Let's discuss on something cool together
                 </h4>
                 <div class="flex flex-col w-full gap-y-2">
@@ -586,7 +586,7 @@
                     <span>123 Street 456 House </span>
                 </div>
             </div>
-            <div class="bg-white flex-1 p-10 rounded-xl relative">
+            <div class="bg-white flex-1 px-2 py-10 lg:p-10 rounded-xl relative md:min-w-80">
                 <div id="particles-js" class="absolute top-0 bottom-0 right-0 left-0"></div>
 
                 <form action="" class="space-y-4 text-slate-500">
