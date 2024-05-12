@@ -64,7 +64,6 @@
         </div>
     </header>
     <main class="flex-1 relative overflow-x-hidden overflow-y-scroll p-10">
-        <div id="lparticles-js" class="fixed top-0 left-0 right-0 bottom-0 "></div>
         <div class="fixed top-0 right-0 left-0 p-5 flex justify-between items-end backdrop-blur-lg">
             <button id="drawer" 
                 class="visble lg:hidden p-2 rounded-full flex justify-center items-center shadow-lg bg-white text-secondary">
@@ -587,7 +586,9 @@
                     <span>123 Street 456 House </span>
                 </div>
             </div>
-            <div class="bg-white flex-1 p-10 rounded-xl ">
+            <div class="bg-white flex-1 p-10 rounded-xl relative">
+                <div id="particles-js" class="absolute top-0 bottom-0 right-0 left-0"></div>
+
                 <form action="" class="space-y-4 text-slate-500">
                     <div class="relative ">
                         <input type="text"
@@ -622,6 +623,7 @@
 </body>
 <script src="./script.js"></script>
 <script src="./particles.min.js"></script> <!-- stats.js lib -->
+<script src="./particles.js"></script> <!-- stats.js lib -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
     var swiper = new Swiper("#mySwiper", {
