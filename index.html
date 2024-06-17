@@ -8,30 +8,32 @@
     <title>Slaega | Portofolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
-    
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="./assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./assets/vendor/boxicons/css/boxicons.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
-<body class="flex font-serif text-primary-color h-screen overflow-hidden">
-    
+
+<body class="flex font-poppins text-primary-color h-screen overflow-hidden">
+
     <header class="w-0 bg-white lg:bg-transparent overflow-hidden h-full flex absolute lg:static lg:w-64 z-10">
-        
+
         <div class="flex-col flex flex-1">
             <div class="flex-col flex bg-primary items-center p-7 gap-5">
                 <div class="p-2 rounded-full bg-secondary">
                     <img class=" rounded-full w-32" src="./assets/image/avatar.jpeg" alt="moi" />
                 </div>
-                <p class="text-white text-3xl">Seba Gédeon </p>
+                <p class="text-white text-3xl text-nowrap">Seba Gédeon </p>
                 <div class="flex gap-2">
                     <a href=".#" class="social"><i class="bx bxl-twitter"></i></a>
-                    <a href=".#" class="social"><i class="bx bxl-github"></i></a>
+                    <a href="https://github.com/SedeoLeos" class="social"><i class="bx bxl-github"></i></a>
                     <a href=".#" class="social"><i class="bx bxl-instagram"></i></a>
                     <a href=".#" class="social"><i class="bx bxl-skype"></i></a>
-                    <a href=".#" class="social"><i class="bx bxl-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/seba-gedeon-matsoula-malonga-50a3a0203/" class="social"><i
+                            class="bx bxl-linkedin"></i></a>
                 </div>
             </div>
             <nav class="">
@@ -65,7 +67,7 @@
     </header>
     <main class="flex-1 relative overflow-x-hidden overflow-y-scroll px-5 py-10 lg:p-10">
         <div class="fixed top-0 right-0 left-0 p-5 flex justify-between items-end backdrop-blur-lg">
-            <button id="drawer" 
+            <button id="drawer"
                 class="visble lg:hidden p-2 rounded-full flex justify-center items-center shadow-lg bg-white text-secondary">
                 <i class='bx bx-menu'></i>
             </button>
@@ -78,13 +80,16 @@
             <div class="w-full  space-y-10" data-aos="fade-in">
                 <h2 class="text-4xl lg:ml-40 text-primary">Hi, I am <br>Séba Gédeon</h2>
                 <p class=" lg:ml-40 max-w-[700px]">
-                    Je suis Seba Gedeon Matsoula Malonga, un développeur passionné, enthousiaste à explorer et à
+                    Je suis Seba Gedeon Matsoula Malonga, un développeur passionné, <span class="text-amber-700">
+                        enthousiaste
+                    </span> à explorer et à
                     apprendre constamment dans le domaine du développement logiciel. Ma passion pour la création de
                     solutions élégantes et efficaces m'a conduit à explorer diverses technologies et plates-formes.
                 </p>
                 <p class="lg:ml-40">I'm <span class="border-b-4 border-primary" id="apropoInfo"
                         data-typed-items="Designer, Developer, Freelancer, Photographer"></span></p>
-                <aside class="stack flex items-center justify-center flex-wrap gap-2 p-0 lg:gap-5 lg:p-5 max-w-[1200px]">
+                <aside
+                    class="stack flex items-center justify-center flex-wrap gap-2 p-0 lg:gap-5 lg:p-5 max-w-[1200px]">
                     <div>
                         <img src="./assets/image/stack/python.svg" alt="">
                     </div>
@@ -297,36 +302,91 @@
         </section>
         <section class="grid grid-cols-1 lg:grid-cols-2 p-2 lg:p-10 gap-5 justify-center items-center mt-20">
             <div class="card-skill">
-                <p>Documentations</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eos eum alias suscipit natus amet
-                    voluptatibus
-                    consectetur cumque deserunt voluptatum exercitationem nisi quibusdam velit nihil, tempore ratione
-                    voluptatem
-                    illum dolore?</p>
+                <p>Architecte <span class="text-amber-700">logiciel</span></p>
+                <p>En tant qu'architecte logiciel, je conçois et supervise la structure globale des systèmes logiciels
+                    pour garantir leur évolutivité, leur performance et leur fiabilité. Mon approche est axée sur la
+                    définition d'architectures robustes qui répondent aux besoins métiers tout en assurant une
+                    intégration harmonieuse des technologies émergentes.</p>
+                <p>
+                    Compétences clés :
+                </p>
+                <ul class="skill-enum">
+                    <li> Conception d'architectures modulaires et évolutives</li>
+                    <li>Expertise en patterns de conception et bonnes pratiques</li>
+                    <li>
+                        Gestion des exigences techniques et fonctionnelles
+                    </li>
+                    <li>
+                        Évaluation et sélection des technologies adaptées
+                    </li>
+                    <li>Mise en œuvre de stratégies de migration et modernisation des systèmes</li>
+                    <li>Conception technique et fonctionnelles</li>
+                </ul>
             </div>
             <div class="card-skill">
-                <p>Documentations</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eos eum alias suscipit natus amet
-                    voluptatibus
-                    consectetur cumque deserunt voluptatum exercitationem nisi quibusdam velit nihil, tempore ratione
-                    voluptatem
-                    illum dolore?</p>
+                <p>Développeur <span class="text-amber-700">fullstack</span></p>
+                <p>En tant que développeur fullstack, je maîtrise aussi bien les technologies front-end que back-end, ce
+                    qui me permet de créer des applications web et mobile complètes et performantes. Je suis capable de
+                    transformer des idées en produits finis, en travaillant sur toutes les couches d'une application.
+                </p>
+                <p>
+                    Compétences clés :</p>
+                <ul class="skill-enum">
+                    <li> Développement front-end : HTML, CSS, JavaScript, frameworks (React,
+                        Nextjs,Flutter,React-native)</li>
+                    <li>Développement back-end : Node.js, Python, Java, PHP, bases de données SQL et NoSQL</li>
+                    <li>
+                        Intégration et développement d'API RESTful
+                    </li>
+                    <li>
+                        Tests unitaires et automatisation des tests
+                    </li>
+                    <li>CI/CD et déploiement sur des plateformes cloud</li>
+                </ul>
             </div>
             <div class="card-skill">
-                <p>Documentations</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eos eum alias suscipit natus amet
-                    voluptatibus
-                    consectetur cumque deserunt voluptatum exercitationem nisi quibusdam velit nihil, tempore ratione
-                    voluptatem
-                    illum dolore?</p>
+                <p>DevOps <span class="text-amber-700">Enthousiaste</span></p>
+                <p>En tant qu'ingénieur DevOps, je mets en place des processus et des outils permettant d'automatiser et
+                    d'optimiser les workflows de développement et de déploiement. Mon objectif est de faciliter la
+                    collaboration entre les équipes de développement et d'exploitation pour améliorer la qualité et la
+                    vitesse des livraisons de logiciels.
+
+                </p>
+                <p>
+                    Compétences clés :</p>
+                <ul class="skill-enum">
+                    <li> Automatisation des déploiements et gestion de l'infrastructure (Terraform, Ansible)</li>
+                    <li> Mise en œuvre de pipelines CI/CD (Jenkins, GitLab CI, Travis CI)</li>
+                    <li>
+                        Surveillance et gestion des performances (Prometheus, Grafana)
+                    </li>
+                    <li>
+                        Gestion des conteneurs et orchestration (Docker, Kubernetes)
+                    </li>
+                    <li>Sécurité des applications et de l'infrastructure</li>
+                </ul>
+
             </div>
             <div class="card-skill">
-                <p>Documentations</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eos eum alias suscipit natus amet
-                    voluptatibus
-                    consectetur cumque deserunt voluptatum exercitationem nisi quibusdam velit nihil, tempore ratione
-                    voluptatem
-                    illum dolore?</p>
+                <p>Analyste <span class="text-amber-700">programmeur et mentor</span></p>
+                <p>En tant qu'analyste programmeur et mentor, j'analyse les besoins métiers pour développer des
+                    solutions logicielles adaptées et j'accompagne les développeurs dans leur progression
+                    professionnelle. Mon rôle est de garantir la qualité des solutions tout en aidant les équipes à
+                    améliorer leurs compétences techniques.</p>
+                <p>
+                    Compétences clés :</p>
+                <ul class="skill-enum">
+                    <li> Analyse des besoins et rédaction des spécifications techniques</li>
+                    <li> Développement de solutions sur mesure et intégration de systèmes</li>
+                    <li>
+                        Revue de code et assurance qualité
+                    </li>
+                    <li>
+                        Formation et mentorat des développeurs juniors
+                    </li>
+                    <li>Méthodologies agiles et gestion de projet</li>
+                </ul>
+
             </div>
 
         </section>
@@ -336,37 +396,142 @@
                 <li class="ex-item">
                     <div class="ex-headers">
                         <div class="ex-headers-item">
-                            <div class="ex-poste">Amazon</div>
-                            <div>Develloper Backend</div>
+                            <div class="ex-poste">Nanocreatives, Brazzaville </div>
+                            <div>Développeur Fullstack & Responsable Technique</div>
                         </div>
                         <div class="ex-headers-item">
-                            2017-Present
+                            Nov. 2023 – Présent
                         </div>
                     </div>
                     <div class="ex-body">
-                        As a product manager at Amazon, I was responsible for the development and execution of the
-                        company's product
-                        roadmap. This included setting goals and objectives, defining features, and working with
-                        cross-functional
-                        teams to bring new products and updates to market.
+                        Gestion de projet et coordination d'équipe :
+
+                        Facilitateur du travail collaboratif en appliquant des politiques de collaboration efficaces.
+                        Coordination des livraisons de solutions et d'architectures logicielles robustes.
+                        Assistance continue aux collaborateurs pour résoudre les problèmes techniques et opérationnels.
+                        Développement et maintenance :
+
+                        Création et maintenance de boiler plates pour accélérer le développement de nouveaux projets.
+                        Mise en place et gestion des pipelines d'intégration continue (CI/CD) pour assurer des
+                        déploiements fiables et rapides.
+                        Rédaction et documentation technique :
+
+                        Rédaction de cahiers des charges détaillés pour définir les spécifications techniques des
+                        projets.
+                        Documentation des architectures logicielles et des processus de développement.
+                        Surveillance et optimisation :
+
+                        Monitoring des différentes plateformes de l'entreprise pour assurer leur performance et leur
+                        disponibilité.
+                        Optimisation des performances des applications en identifiant et en résolvant les goulots
+                        d'étranglement.
                     </div>
                 </li>
                 <li class="ex-item">
                     <div class="ex-headers">
                         <div class="ex-headers-item">
-                            <div class="ex-poste">Amazon</div>
-                            <div>Develloper Backend</div>
+                            <div class="ex-poste">Baye conceptions, Maroc</div>
+                            <div>Consultant Indépendant</div>
                         </div>
                         <div class="ex-headers-item">
-                            2017-Present
+                            Novembre 2023 – Présent
                         </div>
                     </div>
                     <div class="ex-body">
-                        As a product manager at Amazon, I was responsible for the development and execution of the
-                        company's product
-                        roadmap. This included setting goals and objectives, defining features, and working with
-                        cross-functional
-                        teams to bring new products and updates to market.
+                        Développement d'applications mobiles :
+
+                        Conception et développement d'applications mobiles personnalisées en fonction des besoins
+                        spécifiques des clients.
+                        Développement backend :
+
+                        Développement de solutions backend robustes et scalables pour soutenir les applications mobiles
+                        et les autres besoins de l'entreprise.
+                        Développeur Backend & Responsable Backend
+                        Ginov digital, Brazzaville — Jan 2023 – Nov. 2023
+
+                        Développement de connecteurs applicatifs :
+
+                        Implémentation de connecteurs applicatifs permettant d’étendre un logiciel SaaS selon les cas
+                        spécifiques des clients, principalement en utilisant NestJS.
+                        Implémentation de middlewares :
+
+                        Développement de middlewares en utilisant NestJS et Talend pour améliorer l'intégration et la
+                        communication entre différents systèmes.
+                    </div>
+                </li>
+                <li class="ex-item">
+                    <div class="ex-headers">
+                        <div class="ex-headers-item">
+                            <div class="ex-poste">Ginov digital, Brazzaville</div>
+                            <div>Développeur Backend & Responsable Backend</div>
+                        </div>
+                        <div class="ex-headers-item">
+                            Jan 2023 – Nov. 2023
+                        </div>
+                    </div>
+                    <div class="ex-body">
+                        Développement de connecteurs applicatifs :
+
+                        Implémentation de connecteurs applicatifs permettant d’étendre un logiciel SaaS selon les cas
+                        spécifiques des clients, principalement en utilisant NestJS.
+                        Implémentation de middlewares :
+
+                        Développement de middlewares en utilisant NestJS et Talend pour améliorer l'intégration et la
+                        communication entre différents systèmes.
+
+                    </div>
+                </li>
+                <li class="ex-item">
+                    <div class="ex-headers">
+                        <div class="ex-headers-item">
+                            <div class="ex-poste">Ministère de l’Économie, des Finances et du Budget, Brazzaville</div>
+                            <div>Analyste programmeur (stage)</div>
+                        </div>
+                        <div class="ex-headers-item">
+                            Juin 2022 – Jan 2023
+                        </div>
+                    </div>
+                    <div class="ex-body">
+                        Veille technologique :
+
+                        Analyse des solutions technologiques existantes pour identifier les opportunités d'amélioration
+                        et d'innovation.
+                        Migration et amélioration de projet :
+
+                        Migration d'un projet existant en PHP vers le Framework Laravel.
+                        Amélioration du cahier des charges et de la conception du projet migré.
+                        Développement de solutions :
+
+                        Mise en place d'une solution de suivi du recouvrement des impôts en utilisant Laravel.
+                        Création du site web de présentation de l'Initiative pour la Transparence dans les Industries
+                        Extractives (ITIE) national en utilisant Django.
+                        Implémentation d'une solution de délégation de tâches au sein de la Direction des Systèmes
+                        d'Information (DSI) en utilisant NestJS, Angular et Ionic.
+
+                    </div>
+                </li>
+                <li class="ex-item">
+                    <div class="ex-headers">
+                        <div class="ex-headers-item">
+                            <div class="ex-poste">Soprim, Brazzaville</div>
+                            <div>Analyste programmeur (stage)</div>
+                        </div>
+                        <div class="ex-headers-item">
+                            Déc. 2021 – Mai 2022
+                        </div>
+                    </div>
+                    <div class="ex-body">
+                        Analyse et développement de solutions :
+
+                        Analyse des besoins métier pour concevoir des solutions adaptées.
+                        Développement d'applications desktop en utilisant Python, Qt, et PySide6.
+                        Développement d'applications web en utilisant Django.
+                        Gestion de projet et collaboration :
+
+                        Collaboration étroite avec l'équipe de développement et les utilisateurs finaux pour garantir la
+                        réussite du projet.
+                        Responsabilité de l'implémentation complète du système de gestion de stock.
+
                     </div>
                 </li>
 
@@ -378,37 +543,70 @@
                 <li class="ex-item">
                     <div class="ex-headers">
                         <div class="ex-headers-item">
-                            <div class="ex-poste">Amazon</div>
-                            <div>Develloper Backend</div>
+                            <div class="ex-poste">freeCodeCamp</div>
+                            <div>Certification Backend Developer</div>
                         </div>
                         <div class="ex-headers-item">
-                            2017-Present
+                            Sept 2023
                         </div>
                     </div>
                     <div class="ex-body">
-                        As a product manager at Amazon, I was responsible for the development and execution of the
-                        company's product
-                        roadmap. This included setting goals and objectives, defining features, and working with
-                        cross-functional
-                        teams to bring new products and updates to market.
+                        <ul class="skill-enum">
+                            <li> Formation axée sur la réalisation de projets pratiques.</li>
+                            <li> Développement de diverses applications backend, mettant en œuvre des API RESTful, la
+                                gestion de bases de données et l'authentification des utilisateurs.</li>
+                            <li>
+                                Utilisation de Node.js, Express, MongoDB et d'autres technologies backend pour créer des
+                                applications web robustes et scalables.
+                            </li>
+                        </ul>
                     </div>
                 </li>
                 <li class="ex-item">
                     <div class="ex-headers">
                         <div class="ex-headers-item">
-                            <div class="ex-poste">Amazon</div>
-                            <div>Develloper Backend</div>
+                            <div class="ex-poste">Centre de Formation en Informatique du CIRAS, Brazzaville, Congo</div>
+                            <div>Licence en Informatique Appliquée</div>
                         </div>
                         <div class="ex-headers-item">
-                            2017-Present
+                            2019 - 2021
                         </div>
                     </div>
                     <div class="ex-body">
-                        As a product manager at Amazon, I was responsible for the development and execution of the
-                        company's product
-                        roadmap. This included setting goals and objectives, defining features, and working with
-                        cross-functional
-                        teams to bring new products and updates to market.
+                        <ul class="skill-enum">
+                            <li> Études approfondies en développement logiciel, gestion de projets informatiques et
+                                assurance qualité.</li>
+                            <li> Compétences acquises en analyse des systèmes, conception de bases de données et gestion
+                                des infrastructures informatiques.</li>
+                            <li>
+                                Projet de fin d'études axé sur le développement d'un système de commande et de suivi de
+                                taxis en temps réel : Wapi Taxis pour les usagers et Yangoyo pour les chauffeurs. Ce
+                                projet a mis l'accent sur les bonnes pratiques afin de réaliser un logiciel de la
+                                conception à l'implémentation.
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="ex-item">
+                    <div class="ex-headers">
+                        <div class="ex-headers-item">
+                            <div class="ex-poste">Lycée Technique Industriel Premier Mai, Brazzaville, Congo</div>
+                            <div>Baccalauréat Technique Électronique</div>
+                        </div>
+                        <div class="ex-headers-item">
+                            2015 - 2018
+                        </div>
+                    </div>
+                    <div class="ex-body">
+                        <ul class="skill-enum">
+                            <li> Formation en électronique, électrotechnique et automatisation.</li>
+                            <li> Réalisation de projets pratiques, notamment la conception et la mise en œuvre de
+                                systèmes électroniques pour diverses applications industrielles.</li>
+                            <li>
+                                Acquisition de connaissances en conception de circuits électroniques, maintenance des
+                                équipements électroniques et programmation de microcontrôleurs.
+                            </li>
+                        </ul>
                     </div>
                 </li>
 
@@ -422,14 +620,26 @@
                         <div class="card bg-gradient-to-r from-slate-900 to-slate-700">
 
                             <div class="ex-item">
-                               <h5> class="ex-headers-item">Titre</h5>
-                                  
+                                <h5 class="ex-headers-item">Banki</h5>
+
                                 <p class="ex-body">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem deserunt
-                                    rerum modi vero, qui
-                                    mollitia fuga quasi ipsum magnam illo est molestiae quidem sed soluta ipsam
-                                    explicabo a, perferendis
-                                    ut!
+                                <ul class="skill-enum">
+                                    <li> Technologies utilisées : NestJS, Figma, Flutter</li>
+                                    <li> Description : Application de portefeuille numérique.</li>
+                                    <li>
+                                        Rôle : Chef de projet et développeur principal
+                                    </li>
+                                    <li>
+                                        Contributions :
+                                        <ul>
+                                            <li> Rédaction du cahier des charges du client.</li>
+                                            <li>Création des prototypes de l'application.</li>
+                                            <li>Développement de l'API sur NestJS.</li>
+                                            <li>Développement de l'application mobile sur Flutter.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
                                 </p>
                             </div>
                             <img src="./assets/image/project/banki.png" alt="">
@@ -438,15 +648,28 @@
                     <div class="swiper-slide">
                         <div class="card bg-gradient-to-r from-slate-900 to-slate-700">
                             <div class="ex-item">
-                               
-                                    <h5 class="ex-headers-item">Titre</h5>
-                                   
+
+                                <h5 class="ex-headers-item">Tsaka Tutorat</h5>
+
                                 <p class="ex-body">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem deserunt
-                                    rerum modi vero, qui
-                                    mollitia fuga quasi ipsum magnam illo est molestiae quidem sed soluta ipsam
-                                    explicabo a, perferendis
-                                    ut!
+                                <ul class="skill-enum">
+                                    <li>Technologies utilisées : Django, Angular, Flutter, Figma</li>
+                                    <li> Description : Application de mise en relation des apprenants et des tuteur</li>
+                                    <li>
+                                        Rôle : Développeur Fullstack / Chef de projet
+                                    </li>
+                                    <li>
+                                        Contributions :
+                                        <ul>
+                                            <li> Rédaction du cahier des charges du client.</li>
+                                            <li> Développement de l'API en Django.</li>
+                                            <li>Développement du frontend en Angular.
+                                            </li>
+                                            <li>Développement de l'application mobile en Flutter.</li>
+                                            <li>Conception des maquettes du tableau de bord (Web & Mobile).</li>
+                                        </ul>
+                                    </li>
+                                </ul>
                                 </p>
                             </div>
                             <img src="./assets/image/project/tsaka tutora .png" alt="">
@@ -456,25 +679,32 @@
                         <div class="card bg-gradient-to-r from-slate-900 to-slate-700">
 
                             <div class="ex-item">
-                               
-                                    <h5 class="ex-headers-item">Titre</h5>
-                                 
+
+                                <h5 class="ex-headers-item">Refonte du Site de Tsaka</h5>
+
                                 <p class="ex-body">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem deserunt
-                                    rerum modi vero, qui
-                                    mollitia fuga quasi ipsum magnam illo est molestiae quidem sed soluta ipsam
-                                    explicabo a, perferendis
-                                    ut!
+                                <ul class="skill-enum">
+                                    <li>Technologies utilisées : Figma</li>
+                                    <li>Description : Refonte complète du site web de Tsaka suite à la réalisation de
+                                        l'application Tsaka Tutorat.</li>
+                                    <li>
+                                        Rôle : Designer
+                                    </li>
+                                    <li>
+                                        Contributions : Sollicité pour réaliser la refonte du site web de Tsaka après le
+                                        succès de l'application Tsaka Tutorat.
+                                    </li>
+                                </ul>
                                 </p>
                             </div>
                             <img src="./assets/image/project/tsaka web site.png" alt="">
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <!-- <div class="swiper-slide">
                         <div class="card bg-gradient-to-r from-slate-900 to-slate-700">
 
                             <div class="ex-item">
-                                    <h5 class="ex-headers-item">Titre</h5>
+                                <h5 class="ex-headers-item">Titre</h5>
                                 <p class="ex-body">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem deserunt
                                     rerum modi vero, qui
@@ -485,20 +715,26 @@
                             </div>
                             <img src="./assets/image/project/galerie .png" alt="">
                         </div>
-                    </div>
+                    </div>-->
                     <div class="swiper-slide">
                         <div class="card bg-gradient-to-r from-slate-900 to-slate-700">
 
                             <div class="ex-item">
-                               
-                                    <h5 class="ex-headers-item">Titre</h5>
-                                  
+
+                                <h5 class="ex-headers-item">Mydrive</h5>
+
                                 <p class="ex-body">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem deserunt
-                                    rerum modi vero, qui
-                                    mollitia fuga quasi ipsum magnam illo est molestiae quidem sed soluta ipsam
-                                    explicabo a, perferendis
-                                    ut!
+                                <ul class="skill-enum">
+                                    <li>Technologies utilisées : React-Native, nestjs</li>
+                                    <li>Description : Application de demande de commande de taxis.</li>
+                                    <li>
+                                        Rôle : Développeur Frontend
+                                    </li>
+                                    <li>
+                                        Contributions : J'ai intégré 30 écrans sur les 50 prévus, en collaboration avec
+                                        l'équipe de Baye Conception .
+                                    </li>
+                                </ul>
                                 </p>
                             </div>
                             <img src="./assets/image/project/mydrive.png" alt="">
@@ -508,13 +744,32 @@
                         <div class="card bg-gradient-to-r from-slate-900 to-slate-700">
 
                             <div class="ex-item">
-                                    <h5 class="ex-headers-item">Titre</h5>
+                                <h5 class="ex-headers-item">WapiTaxis (Yangoyo)</h5>
                                 <p class="ex-body">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem deserunt
-                                    rerum modi vero, qui
-                                    mollitia fuga quasi ipsum magnam illo est molestiae quidem sed soluta ipsam
-                                    explicabo a, perferendis
-                                    ut!
+                                <ul class="skill-enum">
+                                    <li>Technologies utilisées : Django, Django Channels, Flutter, Figma</li>
+                                    <li>Description : Application de commande et de suivi de taxis en temps réel.</li>
+                                    <li>
+                                        Rôle : Développeur Fullstack / Analiste
+                                    </li>
+                                    <li>
+                                        Contributions :
+                                        <ul>
+                                            <li> Développement de l'application mobile WapiTaxis pour ma soutenance.
+                                            </li>
+                                            <li> Collaboration avec DREpl pour développer l'API sur Django et les
+                                                WebSockets
+                                                avec
+                                                Django Channels.</li>
+                                            <li> Développement de la partie mobile avec Flutter en utilisant le provider
+                                                WebSocket client.</li>
+                                            <li> Conception des prototypes avec Figma.</li>
+                                            <li> Rédaction du cahier des charges en utilisant les méthodes objets (2TUP
+                                                & UML).
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
                                 </p>
                             </div>
                             <img src="./assets/image/project/wapitaxis.png" alt="">
@@ -524,15 +779,30 @@
                         <div class="card bg-gradient-to-r from-slate-900 to-slate-700">
 
                             <div class="ex-item">
-                               
-                                    <h5 class="ex-headers-item">Titre</h5>
-                                   
+
+                                <h5 class="ex-headers-item">Logiciel de Gestion de Stock de Soprim</h5>
+
                                 <p class="ex-body">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem deserunt
-                                    rerum modi vero, qui
-                                    mollitia fuga quasi ipsum magnam illo est molestiae quidem sed soluta ipsam
-                                    explicabo a, perferendis
-                                    ut!
+                                <ul class="skill-enum">
+                                    <li>Technologies utilisées : Django, PyQt, PySide6</li>
+                                    <li>Description : Application de gestion de stock pour Soprim.</li>
+                                    <li>
+                                        Rôle : Développeur Fullstack / Analiste
+                                    </li>
+                                    <li>
+                                        Contributions :
+                                        <ul>
+                                            <li> Réalisation de la première version de l'application avec PyQt et
+                                                PySide6.
+                                            </li>
+                                            <li> Collaboration avec Junior Fenix pour la version Django.</li>
+                                            <li> Conception des prototypes avec Figma.</li>
+                                            <li> Rédaction du cahier des charges en utilisant les méthodes objets (2TUP
+                                                & UML).
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
                                 </p>
                             </div>
                             <img src="./assets/image/project/stoprim geststock.png" alt="">
@@ -542,14 +812,19 @@
                         <div class="card bg-gradient-to-r from-slate-900 to-slate-700">
 
                             <div class="ex-item">
-                            
-                                <h5 class="ex-headers-item">Titre</h5>  
+
+                                <h5 class="ex-headers-item">Buro Plus</h5>
                                 <p class="ex-body">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem deserunt
-                                    rerum modi vero, qui
-                                    mollitia fuga quasi ipsum magnam illo est molestiae quidem sed soluta ipsam
-                                    explicabo a, perferendis
-                                    ut!
+                                <ul class="skill-enum">
+                                    <li>Technologies utilisées : Nestjs</li>
+                                    <li>Description : Application de réservation de place de parking.</li>
+                                    <li>
+                                        Rôle : Développeur Backend
+                                    </li>
+                                    <li>
+                                        Contributions : Développement de l'API de réservation pour Buro Plus.
+                                    </li>
+                                </ul>
                                 </p>
                             </div>
                             <img src="./assets/image/project/Capture d’écran 2024-05-12 à 14.28.53.png" alt="">
@@ -559,13 +834,26 @@
                         <div class="card bg-gradient-to-r from-slate-900 to-slate-700">
 
                             <div class="ex-item">
-                                <h5>Lorem ipsum dolor sit amet consectetur adipisicing</h5>
+                                <h5>Niosso</h5>
                                 <p class="ex-body">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem deserunt
-                                    rerum modi vero, qui
-                                    mollitia fuga quasi ipsum magnam illo est molestiae quidem sed soluta ipsam
-                                    explicabo a, perferendis
-                                    ut!
+                                <ul class="skill-enum">
+                                    <li>Technologies utilisées : Nestjs & React-native</li>
+                                    <li>Description : Application de vente en ligne.</li>
+                                    <li>
+                                        Rôle : Développeur Fullstack
+                                    </li>
+                                    <li>
+                                    <li>
+                                        Contributions :
+                                        <ul>
+                                            <li> Intégration des 10 écrans principaux dans l'application Niosso.
+                                            </li>
+                                            <li> CDéveloppement de l'API de commande pour l'application.</li>
+
+                                        </ul>
+                                    </li>
+                                    </li>
+                                </ul>
                                 </p>
                             </div>
                             <img src="./assets/image/project/Capture d’écran 2024-05-12 à 14.28.40.png" alt="">
@@ -578,7 +866,8 @@
         <section class="px-4 py-10 lg:p-10 flex bg-primary rounded-lg flex-wrap gap-y-5">
             <div class="flex flex-col items-center justify-center gap-y-5 p-0 lg:p-10 text-white">
                 <h4 class="text-3xl w-full lg:w-80">
-                    Let's discuss on something cool together
+                    Merci de votre intérêt ! Remplissez simplement ce formulaire et je vous répondrai dans les plus
+                    brefs délais.
                 </h4>
                 <div class="flex flex-col w-full gap-y-2">
                     <span>smatsoula19@gmail.com</span>

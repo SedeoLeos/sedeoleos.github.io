@@ -13,7 +13,7 @@
         @apply bg-primary p-2 block w-full text-white rounded-full 
     }
     .card-skill {
-        @apply border border-dashed border-gray-300 flex-1 flex p-5 text-base rounded gap-4 flex-col
+        @apply border border-dashed border-gray-300 flex-1 flex p-5 text-base rounded gap-4 flex-col hover:border-amber-700
     }
     .stack div {
         @apply  bg-slate-100 backdrop-blur-sm  p-4 rounded-lg overflow-hidden w-20 h-20 flex justify-center items-center
@@ -45,7 +45,7 @@
         @apply  w-3/4
     }
     .card {
-        @apply p-5 rounded-lg flex  text-white gap-5 flex-col lg:flex-row
+        @apply p-5 rounded-lg flex items-center min-h-[400px] text-white gap-5 flex-col lg:flex-row
     }
     .card img{
         @apply max-h-40 lg:min-h-80 lg:h-80 flex-1 rounded-lg object-cover
@@ -56,4 +56,11 @@
     body.active main div:nth-child(1) {
         @apply left-64 
     }
+    .skill-enum {
+        @apply pl-10 list-disc
+    }
+    .skill-enum li {
+        @apply p-2
+    }
+   
 }
