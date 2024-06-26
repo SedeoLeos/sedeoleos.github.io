@@ -65,8 +65,8 @@
             </nav>
         </div>
     </header>
-    <main class="flex-1 relative overflow-x-hidden overflow-y-scroll px-5 py-10 lg:p-10">
-        <div class="fixed top-0 right-0 left-0 p-5 flex justify-between items-end backdrop-blur-lg">
+    <main class="flex-1 relative overflow-x-hidden overflow-y-scroll py-10">
+        <div class="fixed  z-50 top-0  left-0 right-0 lg:left-64 p-5 flex justify-between items-end backdrop-blur-lg">
             <button id="drawer"
                 class="visble lg:hidden p-2 rounded-full flex justify-center items-center shadow-lg bg-white text-secondary">
                 <i class='bx bx-menu'></i>
@@ -76,7 +76,7 @@
                 <i class='bx bx-moon'></i>
             </button>
         </div>
-        <section id="hero" class="flex flex-col justify-center items-center mt-36">
+        <section id="hero" class="flex flex-col justify-center items-center mt-36 md:p-10 p-5">
             <div class="w-full  space-y-10" data-aos="fade-in">
                 <h2 class="text-4xl lg:ml-40 text-primary">Hi, I am <br>Séba Gédeon</h2>
                 <p class=" lg:ml-40 max-w-[700px]">
@@ -89,7 +89,7 @@
                 <p class="lg:ml-40">I'm <span class="border-b-4 border-primary" id="apropoInfo"
                         data-typed-items="Designer, Developer, Freelancer, Photographer"></span></p>
                 <aside
-                    class="stack flex items-center justify-center flex-wrap gap-2 p-0 lg:gap-5 lg:p-5 max-w-[1200px]">
+                    class="stack flex items-center justify-center flex-wrap gap-2 p-0 lg:gap-5 md:p-5 max-w-[1200px] mx-auto">
                     <div>
                         <img src="./assets/image/stack/python.svg" alt="">
                     </div>
@@ -390,97 +390,108 @@
             </div>
 
         </section>
-        <section class="ex-section">
+        <section class="p-10 space-y-5">
             <h2 class="w-full lg:w-fit">Experience</h2>
-            <ul class="ex-ul">
-                <li class="ex-item">
-                    <div class="ex-headers">
-                        <div class="ex-headers-item">
-                            <div class="ex-poste">Nanocreatives, Brazzaville </div>
-                            <div>Développeur Fullstack & Responsable Technique</div>
-                        </div>
-                        <div class="ex-headers-item">
-                            Nov. 2023 – Présent
-                        </div>
-                    </div>
-                    <div class="ex-body">
-                        Gestion de projet et coordination d'équipe :
+            <div class="swipers overflow-hidden min-h-52 relative" id="experience">
 
-                        Facilitateur du travail collaboratif en appliquant des politiques de collaboration efficaces.
-                        Coordination des livraisons de solutions et d'architectures logicielles robustes.
-                        Assistance continue aux collaborateurs pour résoudre les problèmes techniques et opérationnels.
-                        Développement et maintenance :
-
-                        Création et maintenance de boiler plates pour accélérer le développement de nouveaux projets.
-                        Mise en place et gestion des pipelines d'intégration continue (CI/CD) pour assurer des
-                        déploiements fiables et rapides.
-                        Rédaction et documentation technique :
-
-                        Rédaction de cahiers des charges détaillés pour définir les spécifications techniques des
-                        projets.
-                        Documentation des architectures logicielles et des processus de développement.
-                        Surveillance et optimisation :
-
-                        Monitoring des différentes plateformes de l'entreprise pour assurer leur performance et leur
-                        disponibilité.
-                        Optimisation des performances des applications en identifiant et en résolvant les goulots
-                        d'étranglement.
-                    </div>
-                </li>
-                <li class="ex-item">
-                    <div class="ex-headers">
-                        <div class="ex-headers-item">
-                            <div class="ex-poste">Baye conceptions, Maroc</div>
-                            <div>Consultant Indépendant</div>
-                        </div>
-                        <div class="ex-headers-item">
-                            Novembre 2023 – Présent
+                <div class="swiper-wrapper max-w-full">
+                    <div class="swiper-slide">
+                        <div class="flex w-ful  gap-5">
+                            <div class="gap-5 flex flex-col flex-1">
+                                <div class="flex gap-2">
+                                    <img class="object-cover" src="./assets/image/entreprise/nanocreatives.png" alt="">
+                                    <div>
+                                        <p>Nanocreatives, Brazzaville</p>
+                                        <p class="font-black">Développeur Fullstack
+                                        </p>
+                                    </div>
+                                </div>
+                                <p class="text-justify">
+                                    Architecte et Développeur : Facilite le travail collaboratif, gère les livraisons de
+                                    solutions et d'architectures robustes, et résout les problèmes techniques. Développe
+                                    et maintient des boilerplates, gère les pipelines CI/CD, rédige des cahiers des
+                                    charges et documente les processus, surveille et optimise les performances des
+                                    plateformes.
+                                </p>
+                                <span class="text-sm p-2 bg-amber-50 text-amber-600 rounded-lg max-w-max"> Nov. 2023 –
+                                    Présent</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="ex-body">
-                        Développement d'applications mobiles :
-
-                        Conception et développement d'applications mobiles personnalisées en fonction des besoins
-                        spécifiques des clients.
-                        Développement backend :
-
-                        Développement de solutions backend robustes et scalables pour soutenir les applications mobiles
-                        et les autres besoins de l'entreprise.
-                        Développeur Backend & Responsable Backend
-                        Ginov digital, Brazzaville — Jan 2023 – Nov. 2023
-
-                        Développement de connecteurs applicatifs :
-
-                        Implémentation de connecteurs applicatifs permettant d’étendre un logiciel SaaS selon les cas
-                        spécifiques des clients, principalement en utilisant NestJS.
-                        Implémentation de middlewares :
-
-                        Développement de middlewares en utilisant NestJS et Talend pour améliorer l'intégration et la
-                        communication entre différents systèmes.
-                    </div>
-                </li>
-                <li class="ex-item">
-                    <div class="ex-headers">
-                        <div class="ex-headers-item">
-                            <div class="ex-poste">Ginov digital, Brazzaville</div>
-                            <div>Développeur Backend & Responsable Backend</div>
-                        </div>
-                        <div class="ex-headers-item">
-                            Jan 2023 – Nov. 2023
+                    <div class="swiper-slide">
+                        <div class="flex w-ful  gap-5">
+                            <div class="gap-5 flex flex-col flex-1">
+                                <div class="flex gap-2">
+                                    <img class="object-cover" src="./assets/image/entreprise/V2-Color.png" alt="">
+                                    <div>
+                                        <p>Baye conceptions, Maroc</p>
+                                        <p class="font-black">Développeur Fullstack
+                                        </p>
+                                    </div>
+                                </div>
+                                <p class="text-justify">
+                                    Développement d'applications mobiles et de solutions backend robustes
+                                    et scalables pour en fonction des besions client.
+                                </p>
+                                <span class="text-sm p-2 bg-amber-50 text-amber-600 rounded-lg max-w-max">Octorbre 2023
+                                    – Mars 2024</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="ex-body">
-                        Développement de connecteurs applicatifs :
-
-                        Implémentation de connecteurs applicatifs permettant d’étendre un logiciel SaaS selon les cas
-                        spécifiques des clients, principalement en utilisant NestJS.
-                        Implémentation de middlewares :
-
-                        Développement de middlewares en utilisant NestJS et Talend pour améliorer l'intégration et la
-                        communication entre différents systèmes.
-
+                    <div class="swiper-slide">
+                        <div class="flex w-ful  gap-5">
+                            <div class="gap-5 flex flex-col flex-1">
+                                <div class="flex gap-2">
+                                    <img class="object-cover" src="./assets/image/entreprise/Logo_Ginov_Color-1-1.png"
+                                        alt="">
+                                    <div>
+                                        <p>Ginov digital, Brazzaville</p>
+                                        <p class="font-black">Développeur Backend
+                                        </p>
+                                    </div>
+                                </div>
+                                <p class="text-justify">
+                                    Développement de connecteurs applicatifs,middlewares pour étendre des logiciel SaaS
+                                    & entreprise selon les
+                                    besoins des clients, principalement avec NestJS et Talend pour améliorer
+                                    l'intégration et la communication entre
+                                    différents systèmes.
+                                </p>
+                                <span class="text-sm p-2 bg-amber-50 text-amber-600 rounded-lg max-w-max"> Jan 2023 –
+                                    Nov. 2023</span>
+                            </div>
+                        </div>
                     </div>
-                </li>
+                    <div class="swiper-slide">
+                        <div class="flex w-ful  gap-5">
+                            <div class="gap-5 flex flex-col flex-1">
+                                <div class="flex gap-2">
+                                    <img class="object-cover" src="./assets/image/entreprise/mf.jpeg" alt="">
+                                    <div>
+                                        <p class="">Ministère de l’Économie, des Finances,
+                                            Brazzaville</p>
+                                        <p class="font-black">Analyste programmeur
+                                        </p>
+                                    </div>
+                                </div>
+                                <p class="text-justify">
+                                    Analyse des solutions technologiques existantes pour identifier les opportunités
+                                    d'amélioration et d'innovation. Migration des projets existants en PHP vers Laravel
+                                    et amélioration du cahier des charges et de la conception. Mise en place d'une
+                                    solution de suivi du recouvrement des impôts avec Laravel et création du site web de
+                                    l'ITIE national avec Django. Implémentation d'une solution de délégation de tâches à
+                                    la DSI utilisant NestJS, Angular et Ionic.
+                                </p>
+                                <span class="text-sm p-2 bg-amber-50 text-amber-600 rounded-lg max-w-max"> Juin 2022 –
+                                    Jan 2023</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- <ul class="ex-ul">
+               
                 <li class="ex-item">
                     <div class="ex-headers">
                         <div class="ex-headers-item">
@@ -492,16 +503,13 @@
                         </div>
                     </div>
                     <div class="ex-body">
-                        Veille technologique :
+                      
 
                         Analyse des solutions technologiques existantes pour identifier les opportunités d'amélioration
                         et d'innovation.
-                        Migration et amélioration de projet :
-
-                        Migration d'un projet existant en PHP vers le Framework Laravel.
+                       
+                        Migration des projet existant en PHP vers le Framework Laravel.
                         Amélioration du cahier des charges et de la conception du projet migré.
-                        Développement de solutions :
-
                         Mise en place d'une solution de suivi du recouvrement des impôts en utilisant Laravel.
                         Création du site web de présentation de l'Initiative pour la Transparence dans les Industries
                         Extractives (ITIE) national en utilisant Django.
@@ -535,335 +543,134 @@
                     </div>
                 </li>
 
-            </ul>
+            </ul> -->
         </section>
         <section class="ex-section">
-            <h2>Formation</h2>
-            <ul class="ex-ul">
-                <li class="ex-item">
-                    <div class="ex-headers">
-                        <div class="ex-headers-item">
-                            <div class="ex-poste">freeCodeCamp</div>
-                            <div>Certification Backend Developer</div>
-                        </div>
-                        <div class="ex-headers-item">
-                            Sept 2023
-                        </div>
+            <h2 class="w-full lg:w-fit">Formations</h2>
+            <div class="space-y-10">
+                <a class="flex  gap-5 p-5 rounded-lg  hover:shadow-lg transition-all duration-75 ease-linear">
+                    <img  class="w-10 h-10 rounded-full" src="./assets/image/school/freecodecamp.webp" alt="">
+                    <div class="flex flex-col gap-2">
+                        <p>Sept 2023</p>
+                        <p>freeCodeCamp</p>
+                        <p>Certification Backend Developer</p>
                     </div>
-                    <div class="ex-body">
-                        <ul class="skill-enum">
-                            <li> Formation axée sur la réalisation de projets pratiques.</li>
-                            <li> Développement de diverses applications backend, mettant en œuvre des API RESTful, la
-                                gestion de bases de données et l'authentification des utilisateurs.</li>
-                            <li>
-                                Utilisation de Node.js, Express, MongoDB et d'autres technologies backend pour créer des
-                                applications web robustes et scalables.
-                            </li>
-                        </ul>
+                </a>
+                <a class="flex  gap-5 p-5 rounded-lg hover:shadow-lg transition-all duration-1000 ease-linear">
+                    <img class="w-10 h-10 rounded-full" src="./assets/image/school/cfi-ciras.png" alt="">
+                    <div class="flex flex-col gap-2">
+                        <p> 2019 - 2021</p>
+                        <p>Centre de Formation en Informatique du CIRAS, Brazzaville, Congo</p>
+                        <p>Licence en Informatique Genie logiciel Appliquée</p>
                     </div>
-                </li>
-                <li class="ex-item">
-                    <div class="ex-headers">
-                        <div class="ex-headers-item">
-                            <div class="ex-poste">Centre de Formation en Informatique du CIRAS, Brazzaville, Congo</div>
-                            <div>Licence en Informatique Appliquée</div>
-                        </div>
-                        <div class="ex-headers-item">
-                            2019 - 2021
-                        </div>
+                </a>
+                <a class="flex  gap-5 p-5 rounded-lg  hover:shadow-lg transition-all duration-75 ease-linear">
+                    <img  class="w-10 h-10 rounded-full" src="./assets/image/school/ltim.jpeg" alt="">
+                    <div class="flex flex-col gap-2">
+                        <p> 2015 - 2018</p>
+                        <p>Lycée Technique Industriel Premier Mai, Brazzaville, Congo</p>
+                        <p>Baccalauréat Technique Électronique</p>
                     </div>
-                    <div class="ex-body">
-                        <ul class="skill-enum">
-                            <li> Études approfondies en développement logiciel, gestion de projets informatiques et
-                                assurance qualité.</li>
-                            <li> Compétences acquises en analyse des systèmes, conception de bases de données et gestion
-                                des infrastructures informatiques.</li>
-                            <li>
-                                Projet de fin d'études axé sur le développement d'un système de commande et de suivi de
-                                taxis en temps réel : Wapi Taxis pour les usagers et Yangoyo pour les chauffeurs. Ce
-                                projet a mis l'accent sur les bonnes pratiques afin de réaliser un logiciel de la
-                                conception à l'implémentation.
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="ex-item">
-                    <div class="ex-headers">
-                        <div class="ex-headers-item">
-                            <div class="ex-poste">Lycée Technique Industriel Premier Mai, Brazzaville, Congo</div>
-                            <div>Baccalauréat Technique Électronique</div>
-                        </div>
-                        <div class="ex-headers-item">
-                            2015 - 2018
-                        </div>
-                    </div>
-                    <div class="ex-body">
-                        <ul class="skill-enum">
-                            <li> Formation en électronique, électrotechnique et automatisation.</li>
-                            <li> Réalisation de projets pratiques, notamment la conception et la mise en œuvre de
-                                systèmes électroniques pour diverses applications industrielles.</li>
-                            <li>
-                                Acquisition de connaissances en conception de circuits électroniques, maintenance des
-                                équipements électroniques et programmation de microcontrôleurs.
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-
-            </ul>
-        </section>
-        <section class="flex flex-col gap-10 p-5 my-10">
-            <h2>Réalisation</h2>
-            <div class="swipers px-2 lg:px-20" id="mySwiper">
-                <div class="swiper-wrapper ">
-                    <div class="swiper-slide">
-                        <div class="card bg-gradient-to-r from-slate-900 to-slate-700">
-
-                            <div class="ex-item">
-                                <h5 class="ex-headers-item">Banki</h5>
-
-                                <p class="ex-body">
-                                <ul class="skill-enum">
-                                    <li> Technologies utilisées : NestJS, Figma, Flutter</li>
-                                    <li> Description : Application de portefeuille numérique.</li>
-                                    <li>
-                                        Rôle : Chef de projet et développeur principal
-                                    </li>
-                                    <li>
-                                        Contributions :
-                                        <ul>
-                                            <li> Rédaction du cahier des charges du client.</li>
-                                            <li>Création des prototypes de l'application.</li>
-                                            <li>Développement de l'API sur NestJS.</li>
-                                            <li>Développement de l'application mobile sur Flutter.</li>
-                                        </ul>
-                                    </li>
-                                </ul>
-
-                                </p>
-                            </div>
-                            <img src="./assets/image/project/banki.png" alt="">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card bg-gradient-to-r from-slate-900 to-slate-700">
-                            <div class="ex-item">
-
-                                <h5 class="ex-headers-item">Tsaka Tutorat</h5>
-
-                                <p class="ex-body">
-                                <ul class="skill-enum">
-                                    <li>Technologies utilisées : Django, Angular, Flutter, Figma</li>
-                                    <li> Description : Application de mise en relation des apprenants et des tuteur</li>
-                                    <li>
-                                        Rôle : Développeur Fullstack / Chef de projet
-                                    </li>
-                                    <li>
-                                        Contributions :
-                                        <ul>
-                                            <li> Rédaction du cahier des charges du client.</li>
-                                            <li> Développement de l'API en Django.</li>
-                                            <li>Développement du frontend en Angular.
-                                            </li>
-                                            <li>Développement de l'application mobile en Flutter.</li>
-                                            <li>Conception des maquettes du tableau de bord (Web & Mobile).</li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                </p>
-                            </div>
-                            <img src="./assets/image/project/tsaka tutora .png" alt="">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card bg-gradient-to-r from-slate-900 to-slate-700">
-
-                            <div class="ex-item">
-
-                                <h5 class="ex-headers-item">Refonte du Site de Tsaka</h5>
-
-                                <p class="ex-body">
-                                <ul class="skill-enum">
-                                    <li>Technologies utilisées : Figma</li>
-                                    <li>Description : Refonte complète du site web de Tsaka suite à la réalisation de
-                                        l'application Tsaka Tutorat.</li>
-                                    <li>
-                                        Rôle : Designer
-                                    </li>
-                                    <li>
-                                        Contributions : Sollicité pour réaliser la refonte du site web de Tsaka après le
-                                        succès de l'application Tsaka Tutorat.
-                                    </li>
-                                </ul>
-                                </p>
-                            </div>
-                            <img src="./assets/image/project/tsaka web site.png" alt="">
-                        </div>
-                    </div>
-                    <!-- <div class="swiper-slide">
-                        <div class="card bg-gradient-to-r from-slate-900 to-slate-700">
-
-                            <div class="ex-item">
-                                <h5 class="ex-headers-item">Titre</h5>
-                                <p class="ex-body">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem deserunt
-                                    rerum modi vero, qui
-                                    mollitia fuga quasi ipsum magnam illo est molestiae quidem sed soluta ipsam
-                                    explicabo a, perferendis
-                                    ut!
-                                </p>
-                            </div>
-                            <img src="./assets/image/project/galerie .png" alt="">
-                        </div>
-                    </div>-->
-                    <div class="swiper-slide">
-                        <div class="card bg-gradient-to-r from-slate-900 to-slate-700">
-
-                            <div class="ex-item">
-
-                                <h5 class="ex-headers-item">Mydrive</h5>
-
-                                <p class="ex-body">
-                                <ul class="skill-enum">
-                                    <li>Technologies utilisées : React-Native, nestjs</li>
-                                    <li>Description : Application de demande de commande de taxis.</li>
-                                    <li>
-                                        Rôle : Développeur Frontend
-                                    </li>
-                                    <li>
-                                        Contributions : J'ai intégré 30 écrans sur les 50 prévus, en collaboration avec
-                                        l'équipe de Baye Conception .
-                                    </li>
-                                </ul>
-                                </p>
-                            </div>
-                            <img src="./assets/image/project/mydrive.png" alt="">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card bg-gradient-to-r from-slate-900 to-slate-700">
-
-                            <div class="ex-item">
-                                <h5 class="ex-headers-item">WapiTaxis (Yangoyo)</h5>
-                                <p class="ex-body">
-                                <ul class="skill-enum">
-                                    <li>Technologies utilisées : Django, Django Channels, Flutter, Figma</li>
-                                    <li>Description : Application de commande et de suivi de taxis en temps réel.</li>
-                                    <li>
-                                        Rôle : Développeur Fullstack / Analiste
-                                    </li>
-                                    <li>
-                                        Contributions :
-                                        <ul>
-                                            <li> Développement de l'application mobile WapiTaxis pour ma soutenance.
-                                            </li>
-                                            <li> Collaboration avec DREpl pour développer l'API sur Django et les
-                                                WebSockets
-                                                avec
-                                                Django Channels.</li>
-                                            <li> Développement de la partie mobile avec Flutter en utilisant le provider
-                                                WebSocket client.</li>
-                                            <li> Conception des prototypes avec Figma.</li>
-                                            <li> Rédaction du cahier des charges en utilisant les méthodes objets (2TUP
-                                                & UML).
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                </p>
-                            </div>
-                            <img src="./assets/image/project/wapitaxis.png" alt="">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card bg-gradient-to-r from-slate-900 to-slate-700">
-
-                            <div class="ex-item">
-
-                                <h5 class="ex-headers-item">Logiciel de Gestion de Stock de Soprim</h5>
-
-                                <p class="ex-body">
-                                <ul class="skill-enum">
-                                    <li>Technologies utilisées : Django, PyQt, PySide6</li>
-                                    <li>Description : Application de gestion de stock pour Soprim.</li>
-                                    <li>
-                                        Rôle : Développeur Fullstack / Analiste
-                                    </li>
-                                    <li>
-                                        Contributions :
-                                        <ul>
-                                            <li> Réalisation de la première version de l'application avec PyQt et
-                                                PySide6.
-                                            </li>
-                                            <li> Collaboration avec Junior Fenix pour la version Django.</li>
-                                            <li> Conception des prototypes avec Figma.</li>
-                                            <li> Rédaction du cahier des charges en utilisant les méthodes objets (2TUP
-                                                & UML).
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                </p>
-                            </div>
-                            <img src="./assets/image/project/stoprim geststock.png" alt="">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card bg-gradient-to-r from-slate-900 to-slate-700">
-
-                            <div class="ex-item">
-
-                                <h5 class="ex-headers-item">Buro Plus</h5>
-                                <p class="ex-body">
-                                <ul class="skill-enum">
-                                    <li>Technologies utilisées : Nestjs</li>
-                                    <li>Description : Application de réservation de place de parking.</li>
-                                    <li>
-                                        Rôle : Développeur Backend
-                                    </li>
-                                    <li>
-                                        Contributions : Développement de l'API de réservation pour Buro Plus.
-                                    </li>
-                                </ul>
-                                </p>
-                            </div>
-                            <img src="./assets/image/project/Capture d’écran 2024-05-12 à 14.28.53.png" alt="">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card bg-gradient-to-r from-slate-900 to-slate-700">
-
-                            <div class="ex-item">
-                                <h5>Niosso</h5>
-                                <p class="ex-body">
-                                <ul class="skill-enum">
-                                    <li>Technologies utilisées : Nestjs & React-native</li>
-                                    <li>Description : Application de vente en ligne.</li>
-                                    <li>
-                                        Rôle : Développeur Fullstack
-                                    </li>
-                                    <li>
-                                    <li>
-                                        Contributions :
-                                        <ul>
-                                            <li> Intégration des 10 écrans principaux dans l'application Niosso.
-                                            </li>
-                                            <li> CDéveloppement de l'API de commande pour l'application.</li>
-
-                                        </ul>
-                                    </li>
-                                    </li>
-                                </ul>
-                                </p>
-                            </div>
-                            <img src="./assets/image/project/Capture d’écran 2024-05-12 à 14.28.40.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                </a>
             </div>
         </section>
-        <section class="px-4 py-10 lg:p-10 flex bg-primary rounded-lg flex-wrap gap-y-5">
+        <section class="flex flex-col gap-10 p-10 my-10 " id="">
+            <h2>Réalisation</h2>
+            <div class="swipers px-2 lg:px-20 py-5  overflow-hidden min-h-52 relative" id="mySwiper">
+
+                <div class="swiper-wrapper max-w-full ">
+                    <div class="swiper-slide  ">
+                        <div class="flex flex-col w-full p-5  gap-5">
+                            <p>Banki</p>
+                            <p class="font-black">Application de <span class="text-amber-500">portefeuille
+                                    numérique</span>.
+                            </p>
+                            <img class="rounded-md" src="./assets/image/project/banki.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="flex flex-col w-full p-5  gap-5">
+                            <p>Tsaka Tutorat</p>
+                            <p class="font-black">Application de mise<span class="text-amber-500"> en relation des
+                                    apprenants et des tuteur</span>.
+                            </p>
+                            <img class="rounded-md" src="./assets/image/project/tsaka tutora .png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="flex flex-col w-full p-5  gap-5">
+                            <p>Refonte du Site de Tsaka</p>
+                            <p class="font-black">Refonte complète <span class="text-amber-500">du site web de Tsaka
+                                    suite à la réalisation de
+                                    l'application Tsaka Tutorat.</span>.
+                            </p>
+                            <img class="rounded-md" src="./assets/image/project/tsaka web site.png" alt="">
+                        </div>
+                    </div>
+                    <!-- -->
+                    <div class="swiper-slide">
+                        <div class="flex flex-col w-full p-5  gap-5">
+                            <p>Mydrive</p>
+                            <p class="font-black">Application de <span class="text-amber-500">de réservation de
+                                    taxis.</span>
+                            </p>
+                            <img class="rounded-md" src="./assets/image/project/mydrive.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="flex flex-col w-full p-5 gap-5">
+                            <p>WapiTaxis (Yangoyo)</p>
+                            <p class="font-black">Application de commande et de suivi<span class="text-amber-500"> de
+                                    taxis en temps réel.</span>
+                            </p>
+                            <img class="rounded-md" src="./assets/image/project/wapitaxis.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="flex flex-col w-full p-5  gap-5">
+                            <p>Logiciel de Gestion de Stock de Soprim</p>
+                            <p class="font-black">Application de gestion<span class="text-amber-500">de stock pour
+                                    Soprim.</span>
+                            </p>
+                            <img class="rounded-md" src="./assets/image/project/stoprim geststock.png" alt="">
+                        </div>
+                    </div>
+                    <!-- -->
+                    <div class="swiper-slide">
+                        <div class="flex flex-col w-full p-5  gap-5">
+                            <p>Buro Plus</p>
+                            <p class="font-black">Application de <span class="text-amber-500">réservation de place de
+                                    parking.</span>
+                            </p>
+                            <img class="rounded-md"
+                                src="./assets/image/project/Capture d’écran 2024-05-12 à 14.28.53.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="flex flex-col w-full p-5  gap-5">
+                            <p>Niosso</p>
+                            <p class="font-black"> Application<span class="text-amber-500"> de vente en ligne.</span>
+                            </p>
+                            <img class="rounded-md"
+                                src="./assets/image/project/Capture d’écran 2024-05-12 à 14.28.40.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="flex flex-col w-full p-5  gap-5">
+                            <p>Rezobat</p>
+                            <p class="font-black">Application<span class="text-amber-500">de mise en relation des
+                                    artisant .</span>
+                            </p>
+                            <img class="rounded-md "
+                                src="./assets/image/project/Capture d’écran 2024-05-12 à 14.28.40.png" alt="">
+                        </div>
+                    </div>
+                    <!---->
+                </div>
+            </div>
+
+        </section>
+        <section class="md:mx-10 px-2 md:px-4 py-10 lg:p-10 flex bg-primary rounded-lg flex-wrap gap-y-5">
             <div class="flex flex-col items-center justify-center gap-y-5 p-0 lg:p-10 text-white">
                 <h4 class="text-3xl w-full lg:w-80">
                     Merci de votre intérêt ! Remplissez simplement ce formulaire et je vous répondrai dans les plus
@@ -878,23 +685,33 @@
             <div class="bg-white flex-1 px-2 py-10 lg:p-10 rounded-xl relative md:min-w-80">
                 <div id="particles-js" class="absolute top-0 bottom-0 right-0 left-0"></div>
 
-                <form action="" class="space-y-4 text-slate-500">
-                    <div class="relative ">
-                        <input type="text"
-                            class="peer w-full h-10 p-2 outline-slate-300 border border-slate-200 rounded-sm">
-                        <label class="pr-2 absolute top-2 left-2 peer-focus:-top-4 peer-focus:bg-white" for="">Votre
+                <form id="slae-form" action="" class="space-y-10 text-slate-500">
+
+                    <div class="relative w-full min-w-[200px] h-10">
+                        <input
+                            class="peer w-full h-full bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-gray-900"
+                            type="text" class="peer" placeholder="">
+
+                        <label
+                            class="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-blue-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-gray-500 peer-focus:text-gray-900 before:border-blue-gray-200 peer-focus:before:!border-gray-900 after:border-blue-gray-200 peer-focus:after:!border-gray-900"
+                            for="">Votre
                             nom</label>
                     </div>
-                    <div class="relative ">
-                        <input type="text"
-                            class="peer w-full h-10 p-2 outline-slate-300 border border-slate-200 rounded-sm">
-                        <label class="pr-2 absolute top-2 left-2 peer-focus:-top-4 peer-focus:bg-white" for="">Votre
+                    <div class="relative w-full min-w-[200px] h-10">
+                        <input
+                            class="peer w-full h-full bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-gray-900"
+                            type="text" class="peer" placeholder="">
+                        <label
+                            class="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-blue-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-gray-500 peer-focus:text-gray-900 before:border-blue-gray-200 peer-focus:before:!border-gray-900 after:border-blue-gray-200 peer-focus:after:!border-gray-900"
+                            for="">Votre
                             email</label>
                     </div>
-                    <div class="relative">
+                    <div class="relative w-full min-w-[200px] h-44">
                         <textarea
-                            class="peer w-full h-20 p-2 border border-slate-200 outline-slate-300 rounded-sm"></textarea>
-                        <label class="pr-2 absolute top-2 left-2 peer-focus:-top-4 peer-focus:bg-white" for="">Votre
+                            class="peer w-full h-full bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border focus:border-2 border-t-transparent focus:border-t-transparent text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-gray-900"></textarea>
+                        <label
+                            class="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-blue-gray-500 leading-tight peer-focus:leading-tight peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-blue-gray-500 transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] text-gray-500 peer-focus:text-gray-900 before:border-blue-gray-200 peer-focus:before:!border-gray-900 after:border-blue-gray-200 peer-focus:after:!border-gray-900"
+                            for="">Votre
                             message</label>
                     </div>
                     <button type="button"
@@ -915,15 +732,40 @@
 <script src="./particles.js"></script> <!-- stats.js lib -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
+
     var swiper = new Swiper("#mySwiper", {
-        effect: "cards",
+        effect: "coverflow",
         grabCursor: true,
-        spaceBetween: 30,
-        loop: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
         autoplay: {
-            delay: 10000,
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+    });
+    var swiper2 = new Swiper("#experience", {
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
         },
     });
 </script>
+
 
 </html>
