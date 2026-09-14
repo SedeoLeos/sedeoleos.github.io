@@ -1,269 +1,591 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme-mode="dark">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Slaega — le portfolio a déménagé sur slaega.com</title>
+    <title>slaega — ce portfolio a déménagé sur slaega.com</title>
     <meta name="description"
-        content="Seba Gédeon (Slaega), Lead Software Architect & Developer. Le portfolio officiel est désormais sur slaega.com." />
+        content="Seba Gedeon — ingénieur logiciel full-stack. Cette ancienne version est archivée : le portfolio officiel est sur slaega.com." />
     <link rel="canonical" href="https://slaega.com/" />
-    <meta name="theme-color" content="#131A21" />
+    <meta name="theme-color" content="#0B0B0B" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Slaega — le portfolio a déménagé sur slaega.com" />
-    <meta property="og:description" content="Retrouvez le portfolio complet de Seba Gédeon sur slaega.com." />
+    <meta property="og:title" content="slaega — ce portfolio a déménagé sur slaega.com" />
+    <meta property="og:description" content="Le portfolio officiel de Seba Gedeon est sur slaega.com." />
     <meta property="og:url" content="https://slaega.com/" />
-    <meta property="og:image" content="./assets/image/avatar.jpeg" />
+    <meta property="og:image" content="./assets/image/me.jpg" />
 
-    <link rel="icon" href="./assets/image/avatar.jpeg" />
+    <link rel="icon" href="./assets/image/me.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
         rel="stylesheet" />
 
     <style>
+        /* ── Palette slaega.com ────────────────────────────────────────────
+           L'accent est indépendant du mode ; fond / texte / carte / bordure
+           basculent via html[data-theme-mode]. :root = défauts sombres.     */
         :root {
-            --bg: #131A21;
-            --bg-soft: #121f2c;
-            --card: rgba(255, 255, 255, .04);
-            --line: rgba(255, 255, 255, .1);
-            --text: #f4f6f8;
-            --muted: #9aa7b4;
-            --accent: #8b5cf6;
-            --accent-soft: #a78bfa;
+            --background: #0B0B0B;
+            --foreground: #FFFFFF;
+            --secondary: #8C8C8C;
+            --accent: #FF5A00;
+            --card: #121212;
+            --border: rgba(255, 255, 255, 0.10);
+        }
+
+        html[data-theme-mode="light"] {
+            --background: #FAF8F4;
+            --foreground: #111111;
+            --secondary: #5E5E5E;
+            --card: #FFFFFF;
+            --border: rgba(17, 17, 17, 0.10);
         }
 
         * {
             box-sizing: border-box;
         }
 
-        html,
-        body {
-            height: 100%;
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
             margin: 0;
-            font-family: Poppins, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-            color: var(--text);
-            background: var(--bg);
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .glow {
-            position: fixed;
-            inset: 0;
-            z-index: 0;
-            pointer-events: none;
-            background:
-                radial-gradient(60rem 32rem at 18% -10%, rgba(139, 92, 246, .22), transparent 60%),
-                radial-gradient(48rem 30rem at 92% 108%, rgba(56, 189, 248, .14), transparent 60%),
-                linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
-        }
-
-        .wrap {
-            position: relative;
-            z-index: 1;
-            min-height: 100%;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 2.5rem;
-            padding: 3rem 1.25rem;
-            text-align: center;
+            background: var(--background);
+            color: var(--foreground);
+            font-family: Poppins, ui-sans-serif, system-ui, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            transition: background .3s ease, color .3s ease;
         }
 
-        .badge {
+        /* Square-first : rayon 2px partout, sauf .keep-round */
+        a,
+        button,
+        img,
+        .card,
+        .block {
+            border-radius: 2px;
+        }
+
+        .keep-round {
+            border-radius: 9999px;
+        }
+
+        ::selection {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        *::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+            background: transparent;
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background: color-mix(in srgb, var(--foreground) 22%, transparent);
+            border-radius: 999px;
+        }
+
+        *::-webkit-scrollbar-thumb:hover {
+            background: var(--accent);
+        }
+
+        /* ── Type ─────────────────────────────────────────────────────── */
+        .font-space {
+            font-family: "Space Grotesk", Poppins, system-ui, sans-serif;
+        }
+
+        .font-display {
+            font-family: "Space Grotesk", Poppins, system-ui, sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 0.95;
+        }
+
+        .text-display {
+            font-size: clamp(2.75rem, 7vw, 6rem);
+        }
+
+        .eyebrow {
+            font-family: "Space Grotesk", Poppins, system-ui, sans-serif;
+            font-size: .69rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: .18em;
+        }
+
+        /* ── Header ───────────────────────────────────────────────────── */
+        header {
+            position: fixed;
+            inset: 0 0 auto 0;
+            z-index: 30;
+            display: flex;
+            justify-content: center;
+            backdrop-filter: blur(16px);
+            background: color-mix(in srgb, var(--background) 78%, transparent);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-inner {
+            width: 100%;
+            max-width: 1320px;
+            padding: 1rem clamp(1.5rem, 5vw, 5rem);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .logo {
             display: inline-flex;
             align-items: center;
-            gap: .55rem;
-            padding: .45rem 1rem;
-            border: 1px solid var(--line);
-            border-radius: 999px;
-            background: var(--card);
-            color: var(--muted);
-            font-size: .8rem;
-            letter-spacing: .02em;
+            gap: .65rem;
+            text-decoration: none;
         }
 
-        .dot {
-            width: .5rem;
-            height: .5rem;
-            border-radius: 999px;
-            background: var(--accent-soft);
-            box-shadow: 0 0 0 0 rgba(167, 139, 250, .6);
-            animation: pulse 2.4s infinite;
+        .logo svg {
+            height: 2.1rem;
+            width: 2.1rem;
         }
 
-        @keyframes pulse {
-            70% {
-                box-shadow: 0 0 0 .6rem rgba(167, 139, 250, 0);
-            }
-
-            100% {
-                box-shadow: 0 0 0 0 rgba(167, 139, 250, 0);
-            }
+        .logo span {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: .62rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: .26em;
+            color: color-mix(in srgb, var(--foreground) 80%, transparent);
         }
 
-        .card {
-            width: min(680px, 100%);
-            padding: clamp(1.75rem, 4vw, 3rem);
-            border: 1px solid var(--line);
-            border-radius: 1.5rem;
-            background: var(--card);
-            backdrop-filter: blur(14px);
-            box-shadow: 0 24px 60px rgba(0, 0, 0, .35);
+        .logo span i {
+            color: var(--accent);
+            font-style: normal;
+        }
+
+        .header-links {
             display: flex;
-            flex-direction: column;
             align-items: center;
-            gap: 1.25rem;
+            gap: 1.5rem;
         }
 
-        .avatar {
-            width: 7rem;
-            height: 7rem;
-            border-radius: 999px;
-            object-fit: cover;
-            padding: .35rem;
-            background: var(--bg-soft);
-            border: 1px solid var(--line);
+        .header-links a {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: .69rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: .18em;
+            color: var(--foreground);
+            text-decoration: none;
+            transition: color .2s ease;
+        }
+
+        .header-links a:hover {
+            color: var(--accent);
+        }
+
+        .toggle {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            background: transparent;
+            border: 1px solid color-mix(in srgb, var(--foreground) 15%, transparent);
+            color: color-mix(in srgb, var(--foreground) 70%, transparent);
+            cursor: pointer;
+            transition: border-color .2s ease, color .2s ease;
+        }
+
+        .toggle:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .toggle svg {
+            width: 1rem;
+            height: 1rem;
+        }
+
+        @media (max-width: 720px) {
+            .header-links .social-link {
+                display: none;
+            }
+        }
+
+        /* ── Hero ─────────────────────────────────────────────────────── */
+        main {
+            flex: 1;
+            width: 100%;
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 8.5rem clamp(1.5rem, 5vw, 5rem) 4rem;
+            position: relative;
+        }
+
+        .rig {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .rig i {
+            position: absolute;
+            height: 2px;
+            background: var(--accent);
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+        }
+
+        @media (min-width: 900px) {
+            .hero {
+                grid-template-columns: 1.15fr auto;
+                gap: 4.5rem;
+            }
+        }
+
+        .eyebrow-row {
+            display: flex;
+            align-items: center;
+            gap: .9rem;
+            margin-bottom: 1.6rem;
+            color: color-mix(in srgb, var(--foreground) 60%, transparent);
+        }
+
+        .eyebrow-row .bar {
+            width: 4rem;
+            height: 2px;
+            background: var(--foreground);
         }
 
         h1 {
             margin: 0;
-            font-size: clamp(1.7rem, 5vw, 2.5rem);
-            font-weight: 600;
-            line-height: 1.2;
         }
 
-        h1 span {
-            background: linear-gradient(120deg, var(--accent-soft), #38bdf8);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .role {
-            margin: 0;
-            color: var(--muted);
-            font-weight: 400;
-            font-size: clamp(.95rem, 2.4vw, 1.05rem);
+        h1 .accent {
+            color: var(--accent);
+            display: block;
         }
 
         .lead {
-            margin: 0;
+            margin: 1.8rem 0 0;
             max-width: 46ch;
-            color: var(--muted);
-            font-size: .98rem;
-            line-height: 1.7;
+            color: var(--secondary);
+            font-size: 1rem;
+            line-height: 1.72;
         }
 
         .lead strong {
-            color: var(--text);
+            color: var(--foreground);
             font-weight: 500;
         }
 
-        .cta {
-            display: inline-flex;
-            align-items: center;
-            gap: .6rem;
-            padding: .9rem 2rem;
-            border-radius: 999px;
-            font-weight: 600;
-            text-decoration: none;
-            color: #fff;
-            background: linear-gradient(120deg, var(--accent), #6d28d9);
-            box-shadow: 0 12px 30px rgba(139, 92, 246, .35);
-            transition: transform .2s ease, box-shadow .2s ease;
-        }
-
-        .cta:hover,
-        .cta:focus-visible {
-            transform: translateY(-2px);
-            box-shadow: 0 18px 38px rgba(139, 92, 246, .45);
-        }
-
-        .cta svg {
-            width: 1.05rem;
-            height: 1.05rem;
-        }
-
-        .links {
+        .actions {
+            margin-top: 2.4rem;
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            gap: .75rem 1.5rem;
+            align-items: center;
+            gap: 1rem;
         }
 
-        .links a {
-            color: var(--muted);
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: .75rem;
+            padding: 1rem 2rem;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: .72rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: .18em;
             text-decoration: none;
-            font-size: .9rem;
-            border-bottom: 1px solid transparent;
-            padding-bottom: .15rem;
-            transition: color .2s ease, border-color .2s ease;
+            border: 1px solid var(--accent);
+            background: var(--accent);
+            color: #fff;
+            transition: background .2s ease, color .2s ease, transform .2s ease;
         }
 
-        .links a:hover,
-        .links a:focus-visible {
-            color: var(--text);
-            border-color: var(--accent-soft);
+        .btn:hover {
+            background: transparent;
+            color: var(--accent);
+            transform: translateX(4px);
         }
 
-        footer {
-            color: rgba(154, 167, 180, .7);
-            font-size: .78rem;
+        .btn svg {
+            width: 1rem;
+            height: 1rem;
         }
 
-        footer a {
-            color: inherit;
+        .btn-ghost {
+            background: transparent;
+            border-color: var(--border);
+            color: var(--foreground);
         }
 
-        @media (max-width: 420px) {
-            .cta {
-                width: 100%;
-                justify-content: center;
+        .btn-ghost:hover {
+            border-color: var(--foreground);
+            color: var(--foreground);
+        }
+
+        /* Portrait : bloc accent décalé + cadre carte */
+        .portrait {
+            position: relative;
+            width: 280px;
+            height: 360px;
+            margin: 0 auto;
+        }
+
+        .portrait .offset {
+            position: absolute;
+            inset: 1rem -1rem -1rem 1rem;
+            background: var(--accent);
+        }
+
+        .portrait .frame {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: var(--card);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .portrait img {
+            width: 78%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: 9999px;
+            border: 8px solid var(--background);
+        }
+
+        /* ── Ticker ───────────────────────────────────────────────────── */
+        .ticker {
+            margin-top: 5rem;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            overflow: hidden;
+            padding: 1rem 0;
+        }
+
+        .ticker-track {
+            display: flex;
+            width: max-content;
+            animation: ticker-scroll 28s linear infinite;
+            will-change: transform;
+        }
+
+        .ticker:hover .ticker-track {
+            animation-play-state: paused;
+        }
+
+        .ticker-track span {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: .72rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: .22em;
+            color: var(--secondary);
+            padding: 0 1.75rem;
+            white-space: nowrap;
+        }
+
+        .ticker-track span b {
+            color: var(--accent);
+        }
+
+        @keyframes ticker-scroll {
+            from {
+                transform: translateX(0);
             }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .ticker-track {
+                animation: none;
+            }
+
+            .btn:hover {
+                transform: none;
+            }
+        }
+
+        /* ── Footer ───────────────────────────────────────────────────── */
+        footer {
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-inner {
+            width: 100%;
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 2rem clamp(1.5rem, 5vw, 5rem);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: space-between;
+            align-items: center;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: .68rem;
+            text-transform: uppercase;
+            letter-spacing: .18em;
+            color: var(--secondary);
+        }
+
+        .footer-inner a {
+            color: var(--foreground);
+            text-decoration: none;
+        }
+
+        .footer-inner a:hover {
+            color: var(--accent);
         }
     </style>
 </head>
 
 <body>
-    <div class="glow"></div>
-
-    <main class="wrap">
-        <span class="badge"><span class="dot"></span> Ancienne version — archivée</span>
-
-        <section class="card">
-            <img class="avatar" src="./assets/image/avatar.jpeg" alt="Seba Gédeon" />
-            <h1>Le portfolio est maintenant sur <span>slaega.com</span></h1>
-            <p class="role">Seba Gédeon — Lead Software Architect &amp; Developer</p>
-            <p class="lead">
-                Cette page n'est plus mise à jour. Projets, expériences, stack et contact se trouvent
-                désormais sur <strong>slaega.com</strong>.
-            </p>
-            <a class="cta" href="https://slaega.com" rel="noopener">
-                Aller sur slaega.com
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" aria-hidden="true">
-                    <path d="M5 12h14M13 6l6 6-6 6" />
+    <header>
+        <div class="header-inner">
+            <a class="logo" href="https://slaega.com" rel="noopener" aria-label="slaega">
+                <svg viewBox="148.5 100 308 309" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <g transform="translate(0,600) scale(0.05,-0.05)" stroke="none">
+                <path d="M4336 9978 c-1152 -168 -1627 -1561 -806 -2362 300 -293 601 -396 1541 -525 1054 -146 1325 -426 1260 -1301 -24 -322 27 -351 235 -132 457 478 418 1307 -84 1802 -337 331 -686 455 -1670 590 -512 71 -676 138 -782 319 -153 260 -39 605 246 745 l114 56 607 10 607 10 218 390 c119 215 217 397 218 405 0 20 -1561 14 -1704 -7z" fill="var(--foreground)" />
+                <path d="M6063 9587 l-221 -390 -2 -533 c-3 -670 -5 -624 30 -624 190 0 749 -377 913 -615 93 -134 99 -116 89 240 -5 179 -10 773 -11 1321 l-1 995 -288 -2 -289 -3 -220 -389z" fill="var(--accent)" />
+                <path d="M5260 5730 l0 -1150 1707 0 1706 0 226 345 c125 190 228 359 229 375 2 26 -180 31 -1503 35 l-1505 5 0 506 c0 753 -107 890 -795 1021 l-65 12 0 -1149z" fill="var(--accent)" />
+                <path d="M3338 5175 c-168 -278 -318 -525 -334 -550 l-29 -45 1043 0 1042 0 0 550 0 550 -708 0 -708 0 -306 -505z" fill="var(--foreground)" />
+                <path d="M5200 4108 c-780 -54 -1500 -145 -1900 -238 -244 -58 -250 -58 460 10 789 74 1139 89 2150 89 1012 1 1337 -13 2180 -90 231 -21 479 -43 550 -49 l130 -10 -116 30 c-274 70 -967 171 -1514 221 -330 31 -1668 55 -1940 37z" fill="var(--accent)" />
+                    </g>
                 </svg>
+                <span>SLAEGA<i>·19</i></span>
             </a>
+
+            <nav class="header-links">
+                <a class="social-link" href="https://github.com/slaega" rel="noopener">GH</a>
+                <a class="social-link" href="https://linkedin.com/in/slaega" rel="noopener">LI</a>
+                <a class="social-link" href="https://twitter.com/slaega" rel="noopener">TW</a>
+                <button class="toggle" id="theme-toggle" type="button" aria-label="Changer de thème">
+                    <svg id="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="rig" aria-hidden="true">
+            <i style="top:6rem;left:0;width:7rem;opacity:.30"></i>
+            <i style="top:7rem;left:2rem;width:4rem;opacity:.20"></i>
+            <i style="top:8rem;left:.5rem;width:2.5rem;opacity:.15"></i>
+            <i style="top:6.5rem;right:0;width:6rem;opacity:.25"></i>
+            <i style="top:7.5rem;right:1.5rem;width:3.5rem;opacity:.15"></i>
+            <i style="bottom:2rem;left:1rem;width:8rem;opacity:.20"></i>
+            <i style="bottom:3.5rem;right:0;width:5rem;opacity:.20"></i>
+        </div>
+
+        <section class="hero">
+            <div>
+                <div class="eyebrow-row">
+                    <p class="eyebrow" style="margin:0">salut — ancienne version</p>
+                    <span class="bar"></span>
+                </div>
+
+                <h1 class="font-display text-display">
+                    ce portfolio
+                    <span class="accent">a déménagé</span>
+                </h1>
+
+                <p class="lead">
+                    Je suis <strong>Seba Gedeon</strong>, ingénieur logiciel full-stack. Cette page n'est plus
+                    mise à jour : projets, expériences, services et contact se trouvent désormais sur
+                    <strong>slaega.com</strong>.
+                </p>
+
+                <div class="actions">
+                    <a class="btn" href="https://slaega.com" rel="noopener">
+                        Aller sur slaega.com
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M5 12h14M13 6l6 6-6 6" />
+                        </svg>
+                    </a>
+                    <a class="btn btn-ghost" href="mailto:hello@slaega.com">hello@slaega.com</a>
+                </div>
+            </div>
+
+            <div class="portrait">
+                <div class="offset" aria-hidden="true"></div>
+                <div class="frame">
+                    <img src="./assets/image/me.jpg" alt="Seba Gedeon" />
+                </div>
+            </div>
         </section>
 
-        <nav class="links">
-            <a href="https://github.com/SedeoLeos" rel="noopener">GitHub</a>
-            <a href="https://www.linkedin.com/in/slaega/" rel="noopener">LinkedIn</a>
-            <a href="mailto:gedeon.matsoula@gmail.com">Email</a>
-        </nav>
-
-        <footer>© <span id="year">2026</span> Slaega — <a href="https://slaega.com" rel="noopener">slaega.com</a></footer>
+        <div class="ticker" aria-hidden="true">
+            <div class="ticker-track">
+                <span>slaega.com <b>*</b></span><span>full-stack <b>*</b></span><span>mobile <b>*</b></span>
+                <span>web <b>*</b></span><span>backend <b>*</b></span><span>cloud <b>*</b></span>
+                <span>architecture <b>*</b></span><span>strength <b>*</b></span><span>growth <b>*</b></span>
+                <span>slaega.com <b>*</b></span><span>full-stack <b>*</b></span><span>mobile <b>*</b></span>
+                <span>web <b>*</b></span><span>backend <b>*</b></span><span>cloud <b>*</b></span>
+                <span>architecture <b>*</b></span><span>strength <b>*</b></span><span>growth <b>*</b></span>
+            </div>
+        </div>
     </main>
 
+    <footer>
+        <div class="footer-inner">
+            <span>© <span id="year">2026</span> slaega</span>
+            <span>Portfolio officiel — <a href="https://slaega.com" rel="noopener">slaega.com</a></span>
+        </div>
+    </footer>
+
     <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
+        (function () {
+            var root = document.documentElement;
+            var toggle = document.getElementById('theme-toggle');
+            var icon = document.getElementById('theme-icon');
+            var MOON = '<path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />';
+            var SUN = '<circle cx="12" cy="12" r="4" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />';
+
+            function apply(mode) {
+                root.setAttribute('data-theme-mode', mode);
+                icon.innerHTML = mode === 'light' ? SUN : MOON;
+                toggle.setAttribute('aria-label', mode === 'light' ? 'Passer en sombre' : 'Passer en clair');
+                try { localStorage.setItem('theme-mode', mode); } catch (e) { }
+            }
+
+            var stored = null;
+            try { stored = localStorage.getItem('theme-mode'); } catch (e) { }
+            var prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+            apply(stored || (prefersLight ? 'light' : 'dark'));
+
+            toggle.addEventListener('click', function () {
+                apply(root.getAttribute('data-theme-mode') === 'light' ? 'dark' : 'light');
+            });
+
+            document.getElementById('year').textContent = new Date().getFullYear();
+        })();
     </script>
 </body>
 
